@@ -14,7 +14,7 @@
     <url>http://maven.apache.org/</url>
     <inceptionYear>2001</inceptionYear>
     <modules>
-        <module>jpa</module>
+        <module>utils-jpa</module>
     </modules>
 
     <distributionManagement>

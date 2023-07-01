@@ -68,7 +68,7 @@
         </dependency>
         <dependency>
             <groupId>com.wayne.springcloud</groupId>
-            <artifactId>jpa</artifactId>
+            <artifactId>utils-jpa</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
