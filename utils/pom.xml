@@ -15,6 +15,7 @@
     <inceptionYear>2001</inceptionYear>
     <modules>
         <module>jpa</module>
+        <module>dto</module>
     </modules>
 
     <distributionManagement>

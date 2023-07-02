@@ -3,10 +3,10 @@ server:
 
 spring:
   application:
-    name: cloud-payment
+    name: cloud-payment-service
   jpa:
-    hibernate:
-      ddl-auto: create
+    open-in-view: false
+    show-sql: false
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     properties:
       hibernate:
@@ -17,3 +17,9 @@ spring:
     url: jdbc:sqlserver://localhost:1433;database=cloud01;applicationName=${spring.application.name};selectMethod=cursor;sendStringParametersAsUnicode=true
     username: sl
     password: wayne
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+    org.hibernate: DEBUG

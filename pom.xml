@@ -13,6 +13,7 @@
     <modules>
         <module>api</module>
         <module>utils</module>
+        <module>cloud-provider-payment8001</module>
     </modules>
 
     <distributionManagement>
@@ -182,6 +183,11 @@
                 <artifactId>jpa</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.wayne.springcloud</groupId>
+                <artifactId>payment</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -195,60 +201,60 @@
                     <addResources>true</addResources>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <version>${maven-compiler-plugin.version}</version>-->
-<!--                <configuration>-->
-<!--                    <source>${maven.compiler.source}</source>-->
-<!--                    <target>${maven.compiler.target}</target>-->
-<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
-<!--                    <annotationProcessorPaths>-->
-<!--                        <path>-->
-<!--                            <groupId>org.mapstruct</groupId>-->
-<!--                            <artifactId>mapstruct-processor</artifactId>-->
-<!--                            <version>${mapstruct.version}</version>-->
-<!--                        </path>-->
-<!--                        <path>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                            <version>${lombok.version}</version>-->
-<!--                        </path>-->
-<!--                        <path>-->
-<!--                            <groupId>org.springframework</groupId>-->
-<!--                            <artifactId>spring-context-indexer</artifactId>-->
-<!--                            <version>${spring-framework.version}</version>-->
-<!--                        </path>-->
-<!--                    </annotationProcessorPaths>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--                <version>${maven-javadoc-plugin.version}</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>attach-javadocs</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>jar</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <additionalOptions>-->
-<!--                                <additionalOption>-Xdoclint:none</additionalOption>-->
-<!--                            </additionalOptions>-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <charset>${project.build.sourceEncoding}</charset>-->
-<!--                    <encoding>${project.build.sourceEncoding}</encoding>-->
-<!--                    <quiet>true</quiet>-->
-<!--                    <doclint>none</doclint>-->
-<!--                    <show>package</show>-->
-<!--                    <sourcepath>${delombok.output}</sourcepath>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+                        <path>
+                            <groupId>org.springframework</groupId>
+                            <artifactId>spring-context-indexer</artifactId>
+                            <version>${spring-framework.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <additionalOptions>
+                                <additionalOption>-Xdoclint:none</additionalOption>
+                            </additionalOptions>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <charset>${project.build.sourceEncoding}</charset>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <quiet>true</quiet>
+                    <doclint>none</doclint>
+                    <show>package</show>
+                    <sourcepath>${delombok.output}</sourcepath>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
