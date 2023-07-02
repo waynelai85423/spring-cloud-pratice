@@ -1,0 +1,25 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-service
+  jpa:
+    open-in-view: false
+    show-sql: false
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        show_sql: true
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;database=cloud01;applicationName=${spring.application.name};selectMethod=cursor;sendStringParametersAsUnicode=true
+    username: sl
+    password: wayne
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+    org.hibernate: DEBUG

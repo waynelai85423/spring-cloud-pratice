@@ -7,6 +7,8 @@ import utils.AbstractEntity;
 
 import javax.persistence.Entity;
 import java.io.Serializable;
+
+;
 @Entity
 @Data
 @AllArgsConstructor

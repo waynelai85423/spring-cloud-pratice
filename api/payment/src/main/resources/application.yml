@@ -5,7 +5,11 @@ spring:
   application:
     name: cloud-payment
   jpa:
+    open-in-view: false
+    show-sql: false
     hibernate:
+      naming:
+        physical-strategy: utils.UpperCasePhysicalNamingStrategy
       ddl-auto: create
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     properties:
