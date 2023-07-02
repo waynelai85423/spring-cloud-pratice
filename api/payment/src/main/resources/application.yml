@@ -10,7 +10,7 @@ spring:
     hibernate:
       naming:
         physical-strategy: utils.UpperCasePhysicalNamingStrategy
-      ddl-auto: create
+      ddl-auto: update
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     properties:
       hibernate:
