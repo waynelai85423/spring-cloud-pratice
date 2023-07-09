@@ -1,13 +1,15 @@
-package payment.service.impl;
+package wayne.payment.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
-import payment.jpa.PaymentRepository;
-import payment.service.PaymentService;
-import springcloud.entities.Payment;
+import wayne.payment.http.PaymentRequest;
+import wayne.payment.jpa.PaymentMapper;
+import wayne.payment.jpa.PaymentRepository;
+import wayne.payment.service.PaymentService;
+import wayne.api.entities.Payment;
 @Service
 @Validated
 @Transactional(rollbackFor = Exception.class)
@@ -17,9 +19,11 @@ public class PaymentServiceImpl implements PaymentService {
 
     private final PaymentRepository paymentRepository;
 
+    private final PaymentMapper paymentMapper;
+
     @Override
-    public Payment create(Payment payment) {
-        return paymentRepository.save(payment);
+    public Payment create(PaymentRequest paymentRequest) {
+        return paymentRepository.save(paymentMapper.toJpa(paymentRequest));
     }
 
     @Override

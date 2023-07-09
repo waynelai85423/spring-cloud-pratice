@@ -1,4 +1,4 @@
-package springcloud.entities;
+package wayne.api.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package utils;
+package wayne.utils;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;

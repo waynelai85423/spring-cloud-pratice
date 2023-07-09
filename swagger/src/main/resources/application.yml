@@ -1,0 +1,17 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: cloud-swagger
+
+spring-cloud:
+  payment: ${PAYMENT_HOST:localhost}:${PAYMENT_PORT:8001}
+
+
+springdoc:
+  swagger-ui:
+    urls:
+      -
+      - name: 支付管理
+        url: http://${spring-cloud.payment}/v3/api-docs

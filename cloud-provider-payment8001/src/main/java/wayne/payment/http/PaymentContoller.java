@@ -1,11 +1,15 @@
-package payment.http;
+package wayne.payment.http;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import payment.service.PaymentService;
-import springcloud.entities.CommonResult;
-import springcloud.entities.Payment;
+import wayne.api.entities.Payment;
+import wayne.payment.service.PaymentService;
+import wayne.api.entities.CommonResult;
+
+@Tag(name = "支付 REST API")
 @Slf4j
 @RestController
 @RequestMapping("/payment")
@@ -13,9 +17,10 @@ public class PaymentContoller {
     @Autowired
     private PaymentService paymentService;
 
+    @Operation(summary = "創建支付")
     @PostMapping(value = "/create")
-    public CommonResult create(Payment payment) {
-        payment = paymentService.create(payment);
+    public CommonResult create(@RequestBody PaymentRequest paymentRequest) {
+        Payment payment = paymentService.create(paymentRequest);
         log.info("payment create result ,{}", payment);
 
         if (payment != null) {
@@ -25,6 +30,7 @@ public class PaymentContoller {
         return new CommonResult(444, "failure: " , null);
     }
 
+    @Operation(summary = "查詢支付")
     @GetMapping(value = "/get/{id}")
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
 
