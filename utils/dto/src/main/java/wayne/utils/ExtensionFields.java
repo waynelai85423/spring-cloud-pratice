@@ -1,4 +1,4 @@
-package utils;
+package wayne.utils;
 
 import com.google.common.collect.Maps;
 import lombok.*;

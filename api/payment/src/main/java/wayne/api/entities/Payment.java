@@ -1,9 +1,10 @@
-package springcloud.entities;
+package wayne.api.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import utils.AbstractEntity;
+import wayne.utils.AbstractEntity;
+
 import javax.persistence.Entity;
 import java.io.Serializable;
 
