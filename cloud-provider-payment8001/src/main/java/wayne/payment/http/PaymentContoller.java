@@ -20,7 +20,7 @@ public class PaymentContoller {
 
     @Operation(summary = "創建支付")
     @PostMapping(value = "/create")
-    public CommonResult create(@RequestBody PaymentRequest paymentRequest) {
+    public CommonResult<Payment> create(@RequestBody PaymentRequest paymentRequest) {
         Payment payment = paymentService.create(paymentRequest);
         log.info("payment create result ,{}", payment);
 
