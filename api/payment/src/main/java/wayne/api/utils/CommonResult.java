@@ -1,4 +1,4 @@
-package wayne.api.entities;
+package wayne.api.utils;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

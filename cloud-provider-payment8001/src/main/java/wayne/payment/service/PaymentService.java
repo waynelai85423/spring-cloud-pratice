@@ -2,8 +2,9 @@ package wayne.payment.service;
 
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
-import wayne.payment.http.PaymentRequest;
-import wayne.api.entities.Payment;
+import wayne.api.dto.payment.Payment;
+import wayne.api.dto.payment.PaymentRequest;
+
 
 @Service
 public interface PaymentService {

@@ -32,6 +32,11 @@
         </dependency>
         <dependency>
             <groupId>com.wayne.springcloud</groupId>
+            <artifactId>dto</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wayne.springcloud</groupId>
             <artifactId>payment</artifactId>
         </dependency>
         <dependency>

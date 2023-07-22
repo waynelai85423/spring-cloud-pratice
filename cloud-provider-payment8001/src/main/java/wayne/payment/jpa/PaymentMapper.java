@@ -2,8 +2,9 @@ package wayne.payment.jpa;
 
 import org.mapstruct.Builder;
 import org.mapstruct.Mapper;
-import wayne.api.entities.Payment;
-import wayne.payment.http.PaymentRequest;
+import wayne.api.dto.payment.Payment;
+import wayne.api.dto.payment.PaymentRequest;
+import wayne.api.entities.payment.PaymentEntity;
 
 import static org.mapstruct.CollectionMappingStrategy.TARGET_IMMUTABLE;
 import static org.mapstruct.NullValueMappingStrategy.RETURN_DEFAULT;
@@ -11,5 +12,8 @@ import static org.mapstruct.NullValueMappingStrategy.RETURN_DEFAULT;
 @Mapper(componentModel = "spring", collectionMappingStrategy = TARGET_IMMUTABLE, nullValueMappingStrategy = RETURN_DEFAULT, builder = @Builder)
 public interface PaymentMapper {
 
-    Payment toJpa(PaymentRequest paymentRequest);
+    PaymentEntity toJpa(PaymentRequest paymentRequest);
+
+    Payment fromJpa(PaymentEntity paymentEntity);
+
 }

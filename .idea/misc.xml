@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/consumer-feign-order80" />
     <file type="web" url="file://$PROJECT_DIR$/hsrstrth" />
     <file type="web" url="file://$PROJECT_DIR$/iiiiiiiii" />
   </component>
@@ -10,6 +11,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-api-common/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/consumer-feign-order80/pom.xml" />
       </list>
     </option>
   </component>
