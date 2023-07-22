@@ -23,7 +23,6 @@ public class PaymentContoller {
     public CommonResult<Payment> create(@RequestBody PaymentRequest paymentRequest) {
         Payment payment = paymentService.create(paymentRequest);
         log.info("payment create result ,{}", payment);
-        log.info("payment create result ,{}", payment);
 
         if (payment != null) {
             return new CommonResult(200, "success: " , payment);
