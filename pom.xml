@@ -14,15 +14,10 @@
         <module>api</module>
         <module>utils</module>
         <module>cloud-provider-payment8001</module>
+        <module>consumer-feign-order80</module>
         <module>swagger</module>
     </modules>
 
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>scp://webhost.company.com/www/website</url>
-        </site>
-    </distributionManagement>
 
     <!--  <properties>-->
     <!--    &lt;!&ndash; project configuration &ndash;&gt;-->
@@ -182,6 +177,11 @@
             <dependency>
                 <groupId>com.wayne.springcloud</groupId>
                 <artifactId>jpa</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.wayne.springcloud</groupId>
+                <artifactId>dto</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
