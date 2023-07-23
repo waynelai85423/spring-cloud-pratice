@@ -12,15 +12,15 @@ import wayne.api.dto.payment.PaymentRequest;
 import wayne.api.utils.CommonResult;
 
 @Component
-@FeignClient(name = "payment",url = "${wayne.payment.http.url:localhost:8001}")
+@FeignClient(name = "payment",url = "${wayne.payment.http.url:localhost:8001}",path = "/payment")
 public interface PaymentFeignService {
 
-    @GetMapping(value = "/payment/get/{id}")
+    @GetMapping(value = "/get/{id}")
      CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
 
-    @PostMapping(value = "/payment/create")
+    @PostMapping(value = "/create")
      CommonResult<Payment> create(@RequestBody PaymentRequest paymentRequest);
 
-    @GetMapping("/payment/feign/timeout")
+    @GetMapping("/feign/timeout")
      String paymentFeignTimeout();
 }

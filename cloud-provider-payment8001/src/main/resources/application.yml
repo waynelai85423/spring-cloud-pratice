@@ -6,7 +6,7 @@ spring:
     name: cloud-payment-service
   jpa:
     open-in-view: false
-    show-sql: false
+    show-sql: true
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
     properties:
       hibernate:
