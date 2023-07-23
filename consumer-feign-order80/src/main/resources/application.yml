@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order-consumer-feign-service
+
+logging:
+  level:
+    com.bp.springcloud.service.PaymentFeignService: debug
